@@ -18,4 +18,8 @@ public class Card {
     public int getValueFromEnum(){
         return this.rank.getRank();
     }
+
+    public String getSuitFromEnum(){
+        return this.suit.getSuit();
+    }
 }

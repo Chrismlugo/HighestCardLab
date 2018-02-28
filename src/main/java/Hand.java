@@ -12,7 +12,7 @@ public class Hand {
         return this.hand.size();
     }
 
-    public void addCard(Deck deck){
+    public void takeCard(Deck deck){
         Card card = deck.deal();
          this.hand.add(card);
     }

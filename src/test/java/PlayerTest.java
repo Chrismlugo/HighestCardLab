@@ -3,27 +3,29 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class HandTest {
+public class PlayerTest {
+    Player player;
     Hand hand;
     Deck deck;
     Card card;
 
     @Before
     public void before(){
-        hand = new Hand();
+        player = new Player("bob",hand);
         deck = new Deck(52);
         deck.buildDeck();
     }
 
     @Test
-    public void canCountHand(){
-        assertEquals(0, hand.countHand());
+    public void canCountPlayersHand(){
+        assertEquals(0, player.hand.countHand());
     }
 
     @Test
-    public void canTakeCardFromDeck(){
-        hand.takeCard(deck);
+    public void canBeDealtCardToHand(){
+        player.hand.takeCard(deck);
         assertEquals(51, deck.countCards());
-        assertEquals(1, hand.countHand());
+        assertEquals(1, player.hand.countHand());
+
     }
 }

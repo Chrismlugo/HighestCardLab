@@ -19,7 +19,15 @@ public class CardTest {
     }
 
     @Test
+    public void suitReturnsString(){
+        assertEquals("Clubs", card.getSuitFromEnum());
+    }
+
+    @Test
     public void cardHasAce(){
         assertEquals(1, card.getValueFromEnum());
     }
+
+
+
 }
