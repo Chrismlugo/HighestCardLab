@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import sun.rmi.rmic.iiop.ValueType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,12 +10,12 @@ public class CardTest {
 
     @Before
     public void before(){
-        card = new Card(SuitType.CLUBS,ValueType.ACE);
+        card = new Card(Suit.CLUBS, Rank.ACE);
     }
 
     @Test
     public void canGetSuit(){
-        assertEquals(SuitType.CLUBS, card.getSuit());
+        assertEquals(Suit.CLUBS, card.getSuit());
     }
 
     @Test

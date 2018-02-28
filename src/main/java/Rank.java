@@ -1,4 +1,4 @@
-public enum ValueType {
+public enum Rank {
     ACE(1),
     TWO(2),
     THREE(3),
@@ -13,13 +13,13 @@ public enum ValueType {
     QUEEN(10),
     KING(10);
 
-    private final int value;
+    private final int rank;
 
-    ValueType(int value){
-        this.value = value;
+    Rank(int rank){
+        this.rank = rank;
     }
 
-    public int getValue(){
-        return this.value;
+    public int getRank(){
+        return this.rank;
     }
 }

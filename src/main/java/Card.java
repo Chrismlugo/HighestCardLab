@@ -1,18 +1,21 @@
+import sun.rmi.rmic.iiop.ValueType;
+
 public class Card {
 
-    private SuitType suit;
+    private final Rank rank;
+    private Suit suit;
     private ValueType value;
 
-    public Card(SuitType suit, ValueType value){
+    public Card(Suit suit, Rank rank){
         this.suit = suit;
-        this.value = value;
+        this.rank = rank;
     }
 
-    public SuitType getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 
     public int getValueFromEnum(){
-        return value.getValue();
+        return this.rank.getRank();
     }
 }
